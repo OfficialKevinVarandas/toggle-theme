@@ -5,7 +5,7 @@
   --color-on-background: #1a1c19;
 }
 
-.button__switch-theme.dark {
+:host-context(.dark) .button__switch-theme {
   --color-outline: #8b9389;
   --color-secondary-container: #394b3a;
   --color-background: #1a1c19;
@@ -16,7 +16,8 @@ button {
   border: none;
 }
 
-button, [role="button"] {
+button,
+[role="button"] {
   cursor: pointer;
 }
 
@@ -41,7 +42,7 @@ button, [role="button"] {
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5), 0 1px 2px rgba(0, 0, 0, 0.4);
 }
 
-.dark .button__switch-button {
+:host-context(.dark) .button__switch-button {
   background-color: var(--color-background);
 }
 
@@ -64,21 +65,21 @@ button, [role="button"] {
   fill: var(--color-on-background);
 }
 
-.dark .button__switch-icon svg {
+:host-context(.dark) .button__switch-icon svg {
   fill: white;
   transition: opacity 0.25s;
 }
 
-.dark .button__switch-checked {
+:host-context(.dark) .button__switch-checked {
   transform: translateX(18px);
 }
 
-.dark .button-switch__appearance-sun,
+:host-context(.dark) .button-switch__appearance-sun,
 .button-switch__appearance-moon {
   opacity: 0;
 }
 
 .button-switch__appearance-sun,
-.dark .button-switch__appearance-moon {
+:host-context(.dark) .button-switch__appearance-moon {
   opacity: 1;
 }
